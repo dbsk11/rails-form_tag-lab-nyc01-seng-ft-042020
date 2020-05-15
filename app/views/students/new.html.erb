@@ -1,11 +1,4 @@
-<h3>Student Form</h3>
+<%= render "form" %>
 
-<%= form_tag students_path do %>
-    <label>Student First Name:</label>
-    <%= text_field_tag :'student[first_name]' %><br>
+<%= session[:form_params] if session[:form_params] %>
 
-    <label>Student Last Name:</label><br>
-    <%= text_field_tag :'student[last_name]' %><br>
-
-    <%= submit_tag "Submit Name" %>
-<% end %>
